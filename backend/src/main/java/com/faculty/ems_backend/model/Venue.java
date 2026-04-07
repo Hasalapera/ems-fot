@@ -34,6 +34,4 @@ public class Venue {
     private List<Event> events;
 }
 
-enum VenueType {
-    INDOOR, OUTDOOR
-}
+

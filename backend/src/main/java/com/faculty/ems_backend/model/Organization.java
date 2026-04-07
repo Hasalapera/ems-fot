@@ -32,6 +32,3 @@ public class Organization {
     private List<Event> events;
 }
 
-enum OrgType {
-    CLUB, BATCH, OFFICE
-}

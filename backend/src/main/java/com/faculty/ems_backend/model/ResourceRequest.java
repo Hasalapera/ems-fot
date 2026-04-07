@@ -38,6 +38,3 @@ public class ResourceRequest {
     private List<ResourceRequestItem> items;
 }
 
-enum RequestStatus {
-    PENDING, AR_APPROVED, REJECTED
-}

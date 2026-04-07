@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 import LandingPage from "./pages/LandingPage.jsx";
-import Home from "./pages/Home.jsx";
+import Events from "./pages/Events.jsx";
+import Contact from "./pages/Contact.jsx";
 import './App.css'
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <>
       <Routes>
           <Route path="/" element={<LandingPage/>}/>
-          <Route path="/home" element={<Home/>}/>
+          <Route path="/events" element={<Events/>}/>
+          <Route path="/contact" element={<Contact/>}/>
       </Routes>
     </>
   )

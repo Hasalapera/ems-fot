@@ -2,34 +2,21 @@ package com.faculty.ems_backend.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.util.List;
 
 @Entity
 @Table(name = "resources")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Resource {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String itemName; // උදා: "Projector", "Teak Tree"
+    private String itemName;
 
-    @Enumerated(EnumType.STRING)
-    private ResourceType type; // EQUIPMENT, NATURAL_ASSET
-
+    @Column(nullable = false)
     private Integer totalQuantity;
+
+    @Column(nullable = false)
     private Integer availableQuantity;
-
-    @OneToMany(mappedBy = "resource")
-    private List<ResourceRequestItem> requestItems;
-}
-
-enum ResourceType {
-    EQUIPMENT, NATURAL_ASSET
 }
